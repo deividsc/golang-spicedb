@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 
 	pb "github.com/authzed/authzed-go/proto/authzed/api/v1"
@@ -37,4 +38,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("failed to write schema: %s", err)
 	}
+	fmt.Println("Schema created successfully!")
+	fmt.Println(schema)
 }
